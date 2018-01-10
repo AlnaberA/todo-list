@@ -17,10 +17,17 @@ include("templates/header.php");
                     <div class="panel-body">
                           <label for="title" id="title">Add the title of the task:</label>
                           <input type="text" name="title" value="" class="form-control"/><br/>
-                          <label for="description" id="description">Description of the task:</label>
-                          <input type="text" name="description" value="" class="form-control"/><br/>
+                          <label for="description" id="description">Description of the task(Max 255 characters):</label>
+                          <input type="text" name="description" value="" class="form-control" maxlength="255"/><br/>
                           <label for="description" > Due date of the task:</label>
                           <input type="text" name="date" id="date" value="" class="form-control" readonly="true"/><br/>
+                          <label for="status" > Select a status:</label>
+                          <select name="status" id="status" class="form-control">
+                                <option value="Pending">Pending</option>
+                                <option value="Started">Started</option>
+                                <option value="Completed">Completed</option>
+                                <option value="Late">Late</option>
+                            </select>
                     </div>
 
                     <div class="panel-footer">
