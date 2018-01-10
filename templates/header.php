@@ -1,5 +1,5 @@
 <?php
-include("config.php");
+include("config_CLASS.php");
 
 $conn = new config("root","","app1","localhost");
 ?>
