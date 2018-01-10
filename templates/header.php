@@ -1,7 +1,13 @@
 <?php
 include("config_CLASS.php");
+include("utilities_CLASS.php");
 
 $conn = new config("root","","app1","localhost");
+
+//Testing query function
+//$result = new utilities();
+//$result->query("");
+
 ?>
 <!DOCTYPE html>
 <head>

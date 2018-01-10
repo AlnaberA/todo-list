@@ -15,11 +15,11 @@ include("templates/header.php");
                 
                 <form action="form/addTask.php" method="POST">
                     <div class="panel-body">
-
+                       
                     </div>
 
                     <div class="panel-footer">
-                        Panel Footer
+                       <input type="submit" class="btn btn-success">
                     </div>
                 </form>
             </div>
