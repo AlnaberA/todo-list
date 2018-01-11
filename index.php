@@ -59,19 +59,19 @@ include("templates/header.php");
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <div style="font-size: 200%;" class="label label-primary">Pending: <?php echo $pendingTotal?></div>
+                    <a href="pending.php"> <span style="font-size: 200%;" class="label label-primary">Pending: <?php echo $pendingTotal?></span></a> 
                 </div>
 
                 <div class="col-md-3">
-                    <span style="font-size: 200%;" class="label label-primary">Started: <?php echo $startedTotal?></span>
+                    <a href="started.php"> <span style="font-size: 200%;" class="label label-primary">Started: <?php echo $startedTotal?></span></a> 
                 </div>
 
                 <div class="col-md-3">
-                    <span style="font-size: 200%;" class="label label-primary">Completed: <?php echo $completedTotal?></span>
+                    <a href="completed.php"> <span style="font-size: 200%;" class="label label-primary">Completed: <?php echo $completedTotal?></span></a> 
                 </div>
 
                 <div class="col-md-3">
-                    <span style="font-size: 200%;" class="label label-primary">Late: <?php echo $lateTotal?></span>
+                    <a href="late.php"> <span style="font-size: 200%;" class="label label-primary">Late: <?php echo $lateTotal?></span></a>
                 </div>
             </div>
         </div>

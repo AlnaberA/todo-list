@@ -23,6 +23,10 @@ $result = new utilities();
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   
+    <!--DataTables-->
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+    <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    
     <!--My Style sheet and scripts-->
     <link rel="stylesheet" href="css/style.css">
     <script src="js/scripts.js"></script>
