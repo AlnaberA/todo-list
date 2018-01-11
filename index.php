@@ -8,7 +8,6 @@ include("templates/header.php");
             <h1>To-Do List</h1>
             <p>This application allows you to add your daily tasks!</p> 
          </div>
-        
         <div class="container" style="width:25%;">
             <div class="panel panel-info">
                 <div class="panel-heading">Add a task</div>
@@ -35,6 +34,47 @@ include("templates/header.php");
                     </div>
                 </form>
             </div>
+            
         </div>
+   <?php
+    //mysql_result — Get result data second param. is not needed so leave it 0.(used for row identifier) 
+        $pendingSql="SELECT count(*) FROM `pendingtasks`";
+        $pendingTotal = mysql_result($result->query($pendingSql),0);
+
+        $startedSql = "SELECT count(*) FROM `startedtasks`";
+        $startedTotal = mysql_result($result->query($startedSql),0);
+        
+        $completedSql = "SELECT count(*) FROM `completedtasks`";
+        $completedTotal = mysql_result($result->query($completedSql),0);
+        
+        $lateSql = "SELECT count(*) FROM `latetasks`";
+        $lateTotal = mysql_result($result->query($lateSql),0);
+        
+//          echo "Total Pending:".$pendingTotal."<br/>";
+//          echo "Total Starting:".$startedTotal."<br/>";
+//          echo "Total Completed:".$completedTotal."<br/>";
+//          echo "Total Late:".$lateTotal."<br/>";
+   ?> 
+    <center>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div style="font-size: 200%;" class="label label-primary">Pending: <?php echo $pendingTotal?></div>
+                </div>
+
+                <div class="col-md-3">
+                    <span style="font-size: 200%;" class="label label-primary">Started: <?php echo $startedTotal?></span>
+                </div>
+
+                <div class="col-md-3">
+                    <span style="font-size: 200%;" class="label label-primary">Completed: <?php echo $completedTotal?></span>
+                </div>
+
+                <div class="col-md-3">
+                    <span style="font-size: 200%;" class="label label-primary">Late: <?php echo $lateTotal?></span>
+                </div>
+            </div>
+        </div>
+    </center>
     </body>
 </html>
