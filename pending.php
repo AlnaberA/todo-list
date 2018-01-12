@@ -23,6 +23,8 @@ while($row=mysql_fetch_assoc($info)){
                 <th>Title</th>
                 <th>Description</th>
                 <th>Date</th>
+                <th>Delete</th>
+                <th>Change Status</th>
             </thead>
             <tbody>
                 <?php 
@@ -32,6 +34,16 @@ while($row=mysql_fetch_assoc($info)){
                    <td><?php echo $data['title'];?></td>
                    <td><?php echo $data['description'];?></td>
                    <td><?php echo $data['date'];?></td>
+                   <td class='view' style='width: 10%;text-align: center;'><button id='del_pendingTask_btn' class='btn btn-danger' data-id="<?php echo $data['id']; ?>">x</button></td> 
+                   <td>
+                       <select name="statusPending" id="statusPending" class="statusPending form-control" data-id="<?php echo $data['id']; ?>">
+                                <option value="Pending" selected>Pending</option>
+                                <option value="Started">Started</option>
+                                <option value="Completed">Completed</option>
+                                <option value="Late">Late</option>
+                        </select>
+                   </td> 
+                   
                 </tr>
                 <?php }?>
             </tbody>

@@ -32,3 +32,4 @@ else if($status == "Completed"){
 else{
     $result->query("INSERT INTO `latetasks` (`title`,`description`,`date`) VALUES('{$title}','{$description}','{$date}')");
 }
+header("Location: ../index.php");
