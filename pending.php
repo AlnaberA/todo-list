@@ -6,7 +6,8 @@ $infoArr = array();
 while($row=mysql_fetch_assoc($info)){
     array_push($infoArr, $row);
 }
-print_r($infoArr);
+//Testing if array has correct information.
+//print_r($infoArr);
 
 ?>
 <html>
@@ -16,15 +17,23 @@ print_r($infoArr);
             <p>Pending</p> 
         </div>
     <center><a href="index.php"> <span style="font-size: 200%;" class="label label-primary">Home</span></a></center>
-        
+    
    <table id="pendingTable" class="table table-bordered table-striped">
             <thead>
-                <th></th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Date</th>
             </thead>
             <tbody>
+                <?php 
+                     foreach($infoArr as $data) {
+                ?>    
                 <tr>
-                   <td></td>   
+                   <td><?php echo $data['title'];?></td>
+                   <td><?php echo $data['description'];?></td>
+                   <td><?php echo $data['date'];?></td>
                 </tr>
+                <?php }?>
             </tbody>
         </table>
     
