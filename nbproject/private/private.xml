@@ -4,8 +4,13 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/D:/xampp/htdocs/todo-list/index.php</file>
+            <file>file:/D:/xampp/htdocs/todo-list/completed.php</file>
+            <file>file:/D:/xampp/htdocs/todo-list/js/scripts.js</file>
             <file>file:/D:/xampp/htdocs/todo-list/form/addTask.php</file>
+            <file>file:/D:/xampp/htdocs/todo-list/started.php</file>
             <file>file:/D:/xampp/htdocs/todo-list/templates/header.php</file>
+            <file>file:/D:/xampp/htdocs/todo-list/late.php</file>
+            <file>file:/D:/xampp/htdocs/todo-list/pending.php</file>
             <file>file:/D:/xampp/htdocs/todo-list/sql/tables.sql</file>
         </group>
     </open-files>
