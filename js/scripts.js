@@ -17,7 +17,7 @@ $(document).ready(function(){
                     id:id
                 },
                 success:function(){
-                     alert("Task deleted");
+                     alert("Task deleted.");
                      window.location.reload();
                  }
             });
@@ -25,7 +25,26 @@ $(document).ready(function(){
       });
       $( ".statusPending" ).change(function() {
              var id = $(this).attr('data-id');
-             alert( id );
+             var title = $(this).attr('data-info1');
+             var description = $(this).attr('data-info2');
+             var date = $(this).attr('data-info3');
+             var status = $(this).val();
+             alert( id + ' ' + title + '' + description + ' ' + date + ' ' + status );
+              $.ajax({
+                type:'POST',
+                url:'ajax/updatePendingTask.php',
+                data:{
+                    id:id,
+                    title:title,
+                    description:description,
+                    date:date,
+                    status:status
+                },
+                success:function(){
+                     alert("Task status updated.");
+                     window.location.reload();
+                 }
+            });
        });
 
 });

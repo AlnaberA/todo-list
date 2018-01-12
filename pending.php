@@ -36,7 +36,7 @@ while($row=mysql_fetch_assoc($info)){
                    <td><?php echo $data['date'];?></td>
                    <td class='view' style='width: 10%;text-align: center;'><button id='del_pendingTask_btn' class='btn btn-danger' data-id="<?php echo $data['id']; ?>">x</button></td> 
                    <td>
-                       <select name="statusPending" id="statusPending" class="statusPending form-control" data-id="<?php echo $data['id']; ?>">
+                       <select name="statusPending" id="statusPending" class="statusPending form-control" data-id="<?php echo $data['id']; ?>" data-info1="<?php echo $data['title'];?>" data-info2="<?php echo $data['description'];?>" data-info3="<?php echo $data['date'];?>">
                                 <option value="Pending" selected>Pending</option>
                                 <option value="Started">Started</option>
                                 <option value="Completed">Completed</option>
