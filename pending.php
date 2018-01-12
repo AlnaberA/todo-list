@@ -15,7 +15,18 @@ print_r($infoArr);
             <h1>To-Do List</h1>
             <p>Pending</p> 
         </div>
-        <a href="index.php"> <span style="font-size: 200%;" class="label label-primary">Home</span></a> 
+    <center><a href="index.php"> <span style="font-size: 200%;" class="label label-primary">Home</span></a></center>
         
+   <table id="pendingTable" class="table table-bordered table-striped">
+            <thead>
+                <th></th>
+            </thead>
+            <tbody>
+                <tr>
+                   <td></td>   
+                </tr>
+            </tbody>
+        </table>
+    
     </body>
 </html>
