@@ -1,5 +1,6 @@
 <?php
 include("templates/header.php");
+$version = new version();
 ?>
 
 <html>
@@ -77,4 +78,5 @@ include("templates/header.php");
         </div>
     </center>
     </body>
+    <span style="font-size:8px;"><?php echo $version->displayVersion()?></span>
 </html>
