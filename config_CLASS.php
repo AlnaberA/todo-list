@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * This class is to connect to the database easier.
+ * **/
 class config { 
     //Paramaters to mysql_connect function - built in function for php
     private $dbUser;
@@ -22,7 +24,7 @@ class config {
         //Testing connection
         if($this->dbConn){
             mysql_select_db($this->dbDatabase); //Sets the current active database
-            echo "Successfully connected to database.";//sucessfully connected
+            //echo "Successfully connected to database.";//sucessfully connected
         }else{
             die("Error: Failed to connect to database.");//Abort attempting to connect
         }
