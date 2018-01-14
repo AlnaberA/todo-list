@@ -52,13 +52,17 @@ $version = new version();
         $lateSql = "SELECT count(*) FROM `latetasks`";
         $lateTotal = mysql_result($result->query($lateSql),0);
         
+        $total = $pendingTotal+$startedTotal+$completedTotal+$lateTotal;
+        
 //          echo "Total Pending:".$pendingTotal."<br/>";
 //          echo "Total Starting:".$startedTotal."<br/>";
 //          echo "Total Completed:".$completedTotal."<br/>";
 //          echo "Total Late:".$lateTotal."<br/>";
    ?> 
+    <div>
+        <span class="label label-primary">Total: <?php echo $total?></span>
+    </div>
     <center>
-        <div class="container">
             <div class="row">
                 <div class="col-md-3">
                     <a href="pending.php"> <span style="font-size: 200%;" class="label label-primary">Pending: <?php echo $pendingTotal?></span></a> 
@@ -76,7 +80,6 @@ $version = new version();
                     <a href="late.php"> <span style="font-size: 200%;" class="label label-primary">Late: <?php echo $lateTotal?></span></a>
                 </div>
             </div>
-        </div>
     </center>
     </body>
     <span style="font-size:8px;"><?php echo $version->displayVersion()?></span>
