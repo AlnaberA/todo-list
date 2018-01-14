@@ -4,9 +4,7 @@ Application that allows user to create a todo-list.
 <h3>Deployment Guide:</h3>
 <p>This application uses XAMPP Stack.</p>
 <p>The database name is app1</p>
-<p style="">The database name is app1</p>
-<br/>
-<p style="">Table names:</p>
+<strong><p>Table names:</p></strong>
 <ul>
   <li>completedtasks</li>
   <li>latetasks</li>
