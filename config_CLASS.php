@@ -23,7 +23,11 @@ class config {
         
         //Testing connection
         if($this->dbConn){
-            mysql_select_db($this->dbDatabase); //Sets the current active database
+            if(mysql_select_db($this->dbDatabase)){
+
+            }else{
+                header("Location: dbNotSetup.php?dbUser=".$dbUser."&dbHost=".$dbHost."&dbPass=".$dbPass);
+            }
             //echo "Successfully connected to database.";//sucessfully connected
         }else{
             die("Error: Failed to connect to database.");//Abort attempting to connect
