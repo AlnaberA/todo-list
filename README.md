@@ -14,7 +14,7 @@ Video Presentation and documentation is in Documents folder.
   <li>startedtasks</li>
 </ul>
 <br/>
-Please drag the application into the htdocs of where XAMPP is located(By Default: (C:\xampp\htdocs)).
+Please drag the application into the htdocs of where XAMPP is located(By Default: (C:\xampp\htdocs).
 <br/>
 When the application starts you will be taken to dbNotSetup.php. There deployment scripts will run just click on the return to main page and everything should be setup!
 <br/>
